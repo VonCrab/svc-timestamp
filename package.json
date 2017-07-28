@@ -1,0 +1,22 @@
+{
+  "name": "svc-timestamp",
+  "version": "0.1.0",
+  "description": "Returns unix and natural time!",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express",
+    "timestamp"
+  ]
+}
