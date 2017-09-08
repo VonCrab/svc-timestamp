@@ -1,11 +1,15 @@
 'use strict';
 
 const timestamp = require('./timestamp');
+const path = require('path')
 
 const express = require('express');
 const app = express();
 
 const PORT = 8080;
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.get('/:time', (req, res) => {
   var submitted_time = timestamp(req.params.time);
@@ -13,7 +17,7 @@ app.get('/:time', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.status(404).send("Please put a timestamp, unix or natural language, in the url!");
+  res.render('index');
 });
 
 app.listen(PORT, () => {

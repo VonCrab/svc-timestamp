@@ -1,7 +1,7 @@
 'use strict';
 
 const error_response = { unix: null, natural: null };
-const format_options = { year: 'numeric', month: 'long', day: 'numeric' }
+const format_options = { year: 'numeric', month: 'long', day: 'numeric' };
 
 function buildResponse(time) {
   const decoded_time = decodeURI(time);
